@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: zerodha-lite
+  datasource:
+    url: jdbc:postgresql://localhost:5432/zerodha_lite
+    username: zerodha
+    password: zerodha
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate:
+        format_sql: true
+  jackson:
+    serialization:
+      write-dates-as-timestamps: false
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "health,info"
