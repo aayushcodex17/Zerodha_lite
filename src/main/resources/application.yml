@@ -1,0 +1,31 @@
+spring:
+  application:
+    name: zerodha-lite
+  datasource:
+    url: jdbc:postgresql://localhost:5432/zerodha_lite
+    username: zerodha
+    password: zerodha
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
+  jackson:
+    serialization:
+      write-dates-as-timestamps: false
+
+logging:
+  level:
+    com.zerodhalite: INFO
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "health,info"
+
+security:
+  jwt:
+    secret: "change-me-to-a-long-random-string-change-me-to-a-long-random-string"
+    ttl-seconds: 3600
