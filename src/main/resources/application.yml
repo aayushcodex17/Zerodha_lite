@@ -7,6 +7,7 @@ spring:
     password: zerodha
   jpa:
     hibernate:
+      ddl-auto: update
       ddl-auto: validate
     properties:
       hibernate:
@@ -15,8 +16,17 @@ spring:
     serialization:
       write-dates-as-timestamps: false
 
+logging:
+  level:
+    com.zerodhalite: INFO
+
 management:
   endpoints:
     web:
       exposure:
         include: "health,info"
+
+security:
+  jwt:
+    secret: "change-me-to-a-long-random-string-change-me-to-a-long-random-string"
+    ttl-seconds: 3600
