@@ -8,5 +8,6 @@ public class ZerodhaLiteApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(ZerodhaLiteApplication.class, args);
+        SpringApplication.run(ZerodhaLiteApplication.class, args);
     }
 }
