@@ -123,3 +123,16 @@ Frontend:
 - Scaffold frontend (Next.js, protected routes)
 - Implement simulated market data service
 - Define core domain models (orders, trades, positions)
+
+
+## Frontend Implementation Status
+
+A complete Next.js frontend scaffold has been added in [`frontend/`](frontend) with:
+
+- Auth pages (`/login`, `/register`)
+- App shell and primary pages (`/dashboard`, `/chart`, `/orders`, `/trades`, `/positions`, `/holdings`, `/funds`, `/admin/instruments`)
+- React Query for async query/caching
+- Zustand for client-side auth state
+- TypeScript domain models and mock API layer for rapid backend integration
+
+See `frontend/README.md` for detailed architecture and run instructions.
